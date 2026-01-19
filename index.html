@@ -1,33 +1,111 @@
-<h1>Lincore Apparel</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lincore Apparel</title>
+  <meta charset="utf-8">
 
-<p>Minimal Clothing. Pan India. Crypto Payments Accepted.</p>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #f7f7f7;
+    }
 
-<hr>
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
-<div>
-  <h2>Black T-Shirt</h2>
-  <p>
-    180 GSM cotton<br>
-    Regular fit<br>
-    Available sizes: S / M / L / XL<br>
-    Color: Black
-  </p>
-  <p><strong>Price:</strong> 25 USDC</p>
+    .tagline {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
 
-  <a href="checkout.html">Buy with USDC</a>
-</div>
+    .product {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
 
-<hr>
+    .product img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+    }
 
-<div>
-  <h2>White T-Shirt</h2>
-  <p>
-    Soft cotton<br>
-    Regular fit<br>
-    Available sizes: S / M / L / XL<br>
-    Color: White
-  </p>
-  <p><strong>Price:</strong> 30 USDC</p>
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-  <a href="checkout.html">Buy with USDC</a>
-</div>
+    .buy-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #000000;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Lincore Apparel</h1>
+  <p class="tagline">Minimal clothing · Crypto payments accepted</p>
+
+  <div class="product">
+    <h2>Black T-Shirt</h2>
+
+    <img src="images/black-tshirt.jpg" alt="Black T-Shirt">
+
+    <p>
+      180 GSM cotton<br>
+      Regular fit<br>
+      Sizes: S / M / L / XL<br>
+      Color: Black
+    </p>
+
+    <p class="price">25 USDC</p>
+
+    <a class="buy-btn" href="checkout.html">Buy with USDC</a>
+  </div>
+
+  <div class="product">
+    <h2>White T-Shirt</h2>
+
+    <img src="images/white-tshirt.jpg" alt="White T-Shirt">
+
+    <p>
+      Soft cotton<br>
+      Regular fit<br>
+      Sizes: S / M / L / XL<br>
+      Color: White
+    </p>
+
+    <p class="price">30 USDC</p>
+
+    <a class="buy-btn" href="checkout.html">Buy with USDC</a>
+  </div>
+
+  <div class="footer">
+    © 2026 Lincore Apparel · Pan-India Shipping
+  </div>
+
+</body>
+</html>
