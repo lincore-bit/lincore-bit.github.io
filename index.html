@@ -39,12 +39,14 @@
       flex-direction: column;
     }
 
+    /* IMPORTANT CHANGE IS HERE */
     .product img {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
+      height: auto;          /* auto height */
+      object-fit: contain;   /* no cropping */
       border-radius: 6px;
       margin-bottom: 12px;
+      background: #f0f0f0;
     }
 
     .product h2 {
@@ -91,7 +93,6 @@
 
   <div class="products">
 
-    <!-- BLACK T-SHIRT -->
     <div class="product">
       <img src="images/black.webp" alt="Black T-Shirt">
 
@@ -107,7 +108,6 @@
       <a class="buy-btn" href="checkout.html">Buy with USDC</a>
     </div>
 
-    <!-- WHITE T-SHIRT -->
     <div class="product">
       <img src="images/white.webp" alt="White T-Shirt">
 
