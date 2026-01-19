@@ -21,7 +21,18 @@
     .tagline {
       text-align: center;
       color: #666;
+      margin-bottom: 20px;
+    }
+
+    .trust {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
       margin-bottom: 30px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
 
     .products {
@@ -42,40 +53,23 @@
     .product img {
       width: 100%;
       max-height: 300px;
-      height: auto;
       object-fit: contain;
+      background: #f0f0f0;
       border-radius: 6px;
       margin-bottom: 12px;
-      background: #f0f0f0;
-    }
-
-    .product h2 {
-      font-size: 18px;
-      margin: 8px 0;
-    }
-
-    .product p {
-      font-size: 14px;
-      color: #444;
-      margin: 4px 0;
-    }
-
-    label {
-      font-size: 14px;
-      margin-top: 6px;
     }
 
     select {
       width: 100%;
       padding: 6px;
-      margin-top: 4px;
+      margin: 6px 0;
       font-size: 14px;
     }
 
     .price {
       font-size: 17px;
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .buy-btn {
@@ -86,110 +80,123 @@
       text-align: center;
       text-decoration: none;
       border-radius: 4px;
-      cursor: pointer;
     }
 
     .footer {
-      text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
       font-size: 14px;
-      color: #777;
+      color: #444;
+    }
+
+    .footer a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Lincore Apparel</h1>
-  <p class="tagline">Minimal clothing · Pan-India · Crypto payments (USDC)</p>
+<h1>Lincore Apparel</h1>
+<p class="tagline">Minimal clothing · Pan-India · Crypto payments (USDC)</p>
 
-  <div class="products">
+<div class="trust">
+  Orders are processed after on-chain payment verification.<br>
+  Pan-India shipping. No refunds after shipment.
+</div>
 
-    <!-- BLACK T-SHIRT -->
-    <div class="product">
-      <img src="images/black.webp" alt="Black T-Shirt">
+<div class="products">
 
-      <h2>Black T-Shirt</h2>
+  <!-- BLACK T-SHIRT -->
+  <div class="product">
+    <img src="images/black.webp" alt="Black T-Shirt">
 
-      <p>180 GSM cotton · Regular fit</p>
+    <h2>Black T-Shirt</h2>
+    <p>180 GSM cotton · Regular fit</p>
 
-      <label>
-        Size
-        <select id="size-black">
-          <option value="S">S</option>
-          <option value="M" selected>M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-        </select>
-      </label>
+    <select id="size-black">
+      <option>S</option>
+      <option selected>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
 
-      <label>
-        Color
-        <select id="color-black">
-          <option value="Black" selected>Black</option>
-        </select>
-      </label>
+    <select id="color-black">
+      <option>Black</option>
+    </select>
 
-      <p class="price">25 USDC</p>
+    <p class="price">25 USDC</p>
 
     <a class="buy-btn"
-   href="https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform"
-   onclick="this.href =
-   'https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform'
-   + '?entry.1574130621=' + encodeURIComponent('Black T-Shirt')
-   + '&entry.92377861=' + document.getElementById('size-black').value
-   + '&entry.101835404=' + document.getElementById('color-black').value
-   + '&entry.2026459091=25';">
-   Buy with USDC
-</a>
-      </a>
-    </div>
-
-    <!-- WHITE T-SHIRT -->
-    <div class="product">
-      <img src="images/white.webp" alt="White T-Shirt">
-
-      <h2>White T-Shirt</h2>
-
-      <p>Soft cotton · Regular fit</p>
-
-      <label>
-        Size
-        <select id="size-white">
-          <option value="S">S</option>
-          <option value="M" selected>M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-        </select>
-      </label>
-
-      <label>
-        Color
-        <select id="color-white">
-          <option value="White" selected>White</option>
-        </select>
-      </label>
-
-      <p class="price">30 USDC</p>
-
-  <a class="buy-btn"
-   href="https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform"
-   onclick="this.href =
-   'https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform'
-   + '?entry.1574130621=' + encodeURIComponent('White T-Shirt')
-   + '&entry.92377861=' + document.getElementById('size-white').value
-   + '&entry.101835404=' + document.getElementById('color-white').value
-   + '&entry.2026459091=30';">
-   Buy with USDC
-</a>
-
-    </div>
-
+       href="https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform"
+       onclick="this.href=
+       'https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform'
+       + '?entry.1574130621=' + encodeURIComponent('Black T-Shirt')
+       + '&entry.92377861=' + document.getElementById('size-black').value
+       + '&entry.101835404=' + document.getElementById('color-black').value
+       + '&entry.2026459091=25';">
+       Buy with USDC
+    </a>
   </div>
 
-  <div class="footer">
-    © 2026 Lincore Apparel · Orders verified on Solana
+  <!-- WHITE T-SHIRT -->
+  <div class="product">
+    <img src="images/white.webp" alt="White T-Shirt">
+
+    <h2>White T-Shirt</h2>
+    <p>Soft cotton · Regular fit</p>
+
+    <select id="size-white">
+      <option>S</option>
+      <option selected>M</option>
+      <option>L</option>
+      <option>XL</option>
+    </select>
+
+    <select id="color-white">
+      <option>White</option>
+    </select>
+
+    <p class="price">30 USDC</p>
+
+    <a class="buy-btn"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform"
+       onclick="this.href=
+       'https://docs.google.com/forms/d/e/1FAIpQLSfDExzw1hU95hrpf_jpAwXBtWKxC3YJXgTmFwtlOXu1y_HRfw/viewform'
+       + '?entry.1574130621=' + encodeURIComponent('White T-Shirt')
+       + '&entry.92377861=' + document.getElementById('size-white').value
+       + '&entry.101835404=' + document.getElementById('color-white').value
+       + '&entry.2026459091=30';">
+       Buy with USDC
+    </a>
   </div>
+
+</div>
+
+<div class="footer">
+  <p><strong>Contact</strong></p>
+  <p>
+    Telegram: <a href="https://t.me/xlincore" target="_blank">@xlincore</a><br>
+    Twitter: <a href="https://twitter.com/lincolncore" target="_blank">@lincolncore</a><br>
+    Email: <a href="mailto:lin.coutto@gmail.com">lin.coutto@gmail.com</a>
+  </p>
+
+  <p>
+    Lincoln Apparels<br>
+    Marol, Andheri East<br>
+    Mumbai 400059
+  </p>
+
+  <p>
+    <a href="contact.html">Contact Us</a>
+  </p>
+</div>
 
 </body>
 </html>
