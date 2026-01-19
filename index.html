@@ -39,11 +39,11 @@
       flex-direction: column;
     }
 
-    /* IMPORTANT CHANGE IS HERE */
     .product img {
       width: 100%;
-      height: auto;          /* auto height */
-      object-fit: contain;   /* no cropping */
+      max-height: 300px;
+      height: auto;
+      object-fit: contain;
       border-radius: 6px;
       margin-bottom: 12px;
       background: #f0f0f0;
@@ -58,6 +58,18 @@
       font-size: 14px;
       color: #444;
       margin: 4px 0;
+    }
+
+    label {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      font-size: 14px;
     }
 
     .price {
@@ -93,34 +105,78 @@
 
   <div class="products">
 
+    <!-- BLACK T-SHIRT -->
     <div class="product">
       <img src="images/black.webp" alt="Black T-Shirt">
 
       <h2>Black T-Shirt</h2>
 
-      <p>180 GSM cotton</p>
-      <p>Regular fit</p>
-      <p>Sizes: S / M / L / XL</p>
-      <p>Color: Black</p>
+      <p>180 GSM cotton · Regular fit</p>
+
+      <label>
+        Size
+        <select id="size-black">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+
+      <label>
+        Color
+        <select id="color-black">
+          <option value="Black" selected>Black</option>
+        </select>
+      </label>
 
       <p class="price">25 USDC</p>
 
-      <a class="buy-btn" href="checkout.html">Buy with USDC</a>
+      <a class="buy-btn"
+         href="#"
+         onclick="location.href=
+         'checkout.html?product=Black+T-Shirt&price=25&size='
+         + document.getElementById('size-black').value +
+         '&color=' + document.getElementById('color-black').value;">
+         Buy with USDC
+      </a>
     </div>
 
+    <!-- WHITE T-SHIRT -->
     <div class="product">
       <img src="images/white.webp" alt="White T-Shirt">
 
       <h2>White T-Shirt</h2>
 
-      <p>Soft cotton</p>
-      <p>Regular fit</p>
-      <p>Sizes: S / M / L / XL</p>
-      <p>Color: White</p>
+      <p>Soft cotton · Regular fit</p>
+
+      <label>
+        Size
+        <select id="size-white">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </label>
+
+      <label>
+        Color
+        <select id="color-white">
+          <option value="White" selected>White</option>
+        </select>
+      </label>
 
       <p class="price">30 USDC</p>
 
-      <a class="buy-btn" href="checkout.html">Buy with USDC</a>
+      <a class="buy-btn"
+         href="#"
+         onclick="location.href=
+         'checkout.html?product=White+T-Shirt&price=30&size='
+         + document.getElementById('size-white').value +
+         '&color=' + document.getElementById('color-white').value;">
+         Buy with USDC
+      </a>
     </div>
 
   </div>
